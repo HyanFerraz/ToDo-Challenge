@@ -1,4 +1,4 @@
-#TO-DO List
+# TO-DO List
 
 Este projeto foi desenvolvido utilizando React com typescript, e tem como objetivo a criação de uma lista de tarefas.
 
