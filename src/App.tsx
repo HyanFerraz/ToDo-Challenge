@@ -1,8 +1,8 @@
 import logo from "./assets/rocket.svg";
 import { PlusCircle } from "phosphor-react";
 import { TaskCard } from "./components/TaskCard";
-import { EmptyList } from "./components/emptyList";
-import { useState } from "react";
+import { EmptyList } from "./components/EmptyList";
+import { FormEvent, useState } from "react";
 import "./App.css";
 
 interface Task {
@@ -24,13 +24,15 @@ export function App() {
     setTaskList(newTaskList);
   }
 
-  function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
+  function handleCreateNewTask(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const inputElement = event.currentTarget[0] as HTMLInputElement;
+    console.log(inputElement);
     setTaskList([
       ...taskList,
       {
         id: Math.random(),
-        title: event.currentTarget[0].value,
+        title: inputElement.value,
         isComplete: false,
       },
     ]);
@@ -41,7 +43,7 @@ export function App() {
     setTaskList(newTaskList);
   }
 
-  function handleInvalidInput(event: React.FormEvent<HTMLInputElement>) {
+  function handleInvalidInput(event: FormEvent<HTMLInputElement>) {
     event.currentTarget.setCustomValidity("Esse campo é obrigatório!");
   }
 
