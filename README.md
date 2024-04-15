@@ -2,7 +2,7 @@
 
 Este projeto foi desenvolvido utilizando React com typescript, e tem como objetivo a criação de uma lista de tarefas.
 
-O Figma foi utilizado para a criação do layout, e foi dipoibilizado pela Rocketseat.
+O Figma foi utilizado para a criação do layout, e foi diponibilizado pela Rocketseat.
 
 ## Como rodar o projeto
 
